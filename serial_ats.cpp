@@ -456,7 +456,7 @@ int main() {
     }
 
     for(auto company:companies) {
-        string file_name = "outputs/" + company + "_output.csv";
+        string file_name = "outputs_serial/" + company + "_output.csv";
         std::ofstream filecsv(file_name);
         filecsv << "ASK,BID,QUANTITY\n";
         for(int i=0;i<allStocksData[allStocksIndex[company]]->updates;i++) {
