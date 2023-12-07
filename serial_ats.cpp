@@ -146,11 +146,6 @@ class SymbolData {
 map<string, int> allStocksIndex;
 vector<SymbolData*> allStocksData;
 
-// struct Portfolio {
-//     double capital;
-//     double stocks;
-// };
-
 class Portfolio {
     public:
         double capital;
@@ -165,13 +160,7 @@ class Portfolio {
 Portfolio *portfolio = new Portfolio();
 
 // Function to calculate RSI with momentum alpha
-// double calculateRSI(const std::vector<TickData>& data, size_t index, size_t period) {
 double calculateRSI(SymbolData *data) {
-    // Implementation of RSI calculation (not provided for brevity)
-    // This would involve calculating average gains and losses over a specified period
-    // and using those values to compute the RSI.
-    // You may choose to use an existing library for technical indicators.
-    // if 
     if(data->avg_loss==0) {
         return 100.0;
     } 
@@ -275,10 +264,6 @@ bool executeTrades(double rsiValue, double riskRewardRatio, double momentumAlpha
     const double momentumAlphaThreshold = 0;
     bool flag = false;
 
-    // Placeholder for current stock symbol; replace with actual implementation
-    // std::string currentSymbol = "AAPL";
-
-    // Example trade execution logic
     if (rsiValue > rsiThreshold && momentumAlpha > momentumAlphaThreshold) {
         // Buy signal
         flag = true;
@@ -313,16 +298,8 @@ bool executeTrades(double rsiValue, double riskRewardRatio, double momentumAlpha
         // std::cout << "SELL " << orderSize << " worth of " << data.symbol << " stocks.\n";
     } 
     return flag;
-    // else {
-    //     // Hold (no trade signal)
-    //     // Print hold information
-    //     std::cout << "Hold position for " << data.symbol << ".\n";
-    // }
 
-    // Additional logic for tracking trades, updating portfolio, etc.
-    // ...
-
-    // Note: This is a simplified example, and actual trade execution logic may vary based on your specific strategy.
+    // Note: This is a simplified example, and actual trade execution logic may vary based on specific strategy.
 }
 
 int main() {
@@ -381,8 +358,7 @@ int main() {
         if(price.timestamp-start_time >= duration.count()) {
             usleep(1000*(price.timestamp-start_time - duration.count()));
             usleep(delay);// stock information delay
-            // latency_start = chrono::high_resolution_clock::now();
-
+           
             if(duration.count()<600000) {
                 allStocksData[allStocksIndex[price.symbol]]->addUpdatePrice(price);
 	            total_ticks_read++;
@@ -421,9 +397,7 @@ int main() {
         // std::cout<<duration.count()<<" "<<price.timestamp-start_time<<endl;
 
         count++;
-        // if(count%20000==0) 
-        // cout<<count<<endl;
-        // if(count == 50000) break;
+        // if(count%20000==0) Uncomment to check progress
     }
 
     double latency_avg=0;
