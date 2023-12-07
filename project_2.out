@@ -1,0 +1,73 @@
+==========================================
+SLURM_JOB_ID = 18037998
+SLURM_JOB_NODELIST = d14-13
+TMPDIR = /tmp/SLURM_18037998
+==========================================
+20000
+40000
+60000
+80000
+100000
+120000
+140000
+160000
+180000
+200000
+220000
+240000
+260000
+280000
+300000
+320000
+340000
+360000
+380000
+400000
+420000
+440000
+460000
+480000
+500000
+520000
+540000
+560000
+580000
+600000
+620000
+640000
+660000
+Latency in Microseconds: 10249.6
+Total ticks in raw data 667218
+Total ticks read 667218 Total orders executed 622844 Total orders delayed 3174
+Total capital at the end: 132.741
+All stock quantities are zero:
+AAPL : 0
+AMZN : 0
+ARISTA : 0
+ATLASSIAN : 0
+BANKNY : 0
+BLKROCK : 0
+BOFA : 0
+CISCO : 0
+CITI : 0
+DELTA : 0
+EXPEDIA : 0
+FACEBOOK : 0
+GOOGLE : 0
+JPMC : 0
+LYFT : 0
+MICROSOFT : 0
+MORGAN : 0
+NETFLIX : 0
+NVIDIA : 0
+ORACLE : 0
+PALOALTO : 0
+PAYPAL : 0
+QUALCOMM : 0
+SALESFORCE : 0
+SLB : 0
+SOUTHWEST : 0
+SPOTIFY : 0
+TESLA : 0
+UBER : 0
+ZOOM : 0
